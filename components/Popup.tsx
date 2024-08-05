@@ -7,16 +7,8 @@ import PopupBox from "./ui/PopupBox";
 const Popup: React.FC<any> = ({ data }) => {
   const [popUp, setPopUp] = useAtom(modalUp);
   const [value] = useAtom(selectedClass);
-  // Tıklama olayını dinleyin
-  window.addEventListener("click", (event) => {
-    const clickedElement: any = event.target;
-    const id = clickedElement.id;
-    if (id === "main-pop") {
-      setPopUp(false);
-    }
-  });
+ 
 
-  // ESC tuşuna basıldığında popup'ı kapatın
   window.addEventListener("keydown", (event) => {
     if (event.key === "Escape") {
       setPopUp(false);
