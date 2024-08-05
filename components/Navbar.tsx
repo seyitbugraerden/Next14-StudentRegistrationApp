@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "./ui/sidebar";
 import {
-  IconArrowLeft,
   IconBrandTabler,
   IconSettings,
   IconUserBolt,
@@ -14,13 +13,6 @@ import { cn } from "@/lib/utils";
 
 export const Navbar: React.FC<any> = ({ children }) => {
   const links = [
-    {
-      label: "Sınıflar",
-      href: "#",
-      icon: (
-        <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
-      ),
-    },
     {
       label: "Öğrenciler",
       href: "#",
@@ -36,6 +28,13 @@ export const Navbar: React.FC<any> = ({ children }) => {
       ),
     },
   ];
+  const sidelink = {
+    label: "Sınıflar",
+    href: "#",
+    icon: (
+      <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+    ),
+  };
   const [open, setOpen] = useState(false);
   return (
     <div
@@ -51,6 +50,7 @@ export const Navbar: React.FC<any> = ({ children }) => {
               <Logo />
             </>
             <div className="mt-8 flex flex-col gap-2">
+              <SidebarLink link={sidelink} />
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
