@@ -3,6 +3,7 @@ import { modalUp } from "@/state/state";
 import { useSetAtom } from "jotai";
 import React from "react";
 import NewClass from "./newClass";
+import { fetchClasses } from "@/fetch/fetch";
 
 const PopupBox: React.FC<any> = ({ value, data }) => {
   const popupvalue = useSetAtom(modalUp);
@@ -27,15 +28,15 @@ const PopupBox: React.FC<any> = ({ value, data }) => {
           body: JSON.stringify({ classes: updatedClasses }),
         }
       );
-
       if (!response.ok) {
         throw new Error("Network response was not ok");
       }
 
       const result = await response.json();
-      console.log("Success:", result);
       // Optionally close the modal or update local state
       popupvalue(false);
+
+      // Perform a hard refresh
     } catch (error) {
       console.error("Error:", error);
     }

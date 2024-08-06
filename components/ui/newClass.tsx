@@ -40,7 +40,6 @@ function NewClass() {
     );
 
     if (classExists) {
-      console.log("Class already exists");
       setEkli(true);
       setTimeout(() => {
         setEkli(false);
@@ -75,7 +74,6 @@ function NewClass() {
       }
 
       const result = await response.json();
-      console.log("Success:", result);
       // Optionally close the modal or update local state
       setIsOpen(false);
     } catch (error) {

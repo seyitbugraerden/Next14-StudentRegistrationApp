@@ -1,20 +1,38 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useAtom } from "jotai";
 import { modalUp, selectedClass } from "@/state/state";
 import PopupBox from "./ui/PopupBox";
 
-const Popup: React.FC<any> = ({ data }) => {
+interface PopupProps {
+  data: any;
+}
+
+const Popup: React.FC<PopupProps> = ({ data }) => {
   const [popUp, setPopUp] = useAtom(modalUp);
   const [value] = useAtom(selectedClass);
- 
 
-  window.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") {
-      setPopUp(false);
-    }
-  });
+  useEffect(() => {
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setPopUp(false);
+      }
+    };
 
+    window.addEventListener("keydown", handleEscape);
+
+    // Cleanup the event listener on unmount
+    return () => {
+      window.removeEventListener("keydown", handleEscape);
+    };
+  }, [setPopUp]);
+  if (popUp === true) {
+    window.addEventListener("click", (e) => {
+      if (e.target.id === "main-pop") {
+        setPopUp(false);
+      }
+    });
+  }
   return (
     <>
       {popUp && (
