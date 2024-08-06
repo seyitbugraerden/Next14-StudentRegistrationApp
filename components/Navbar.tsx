@@ -14,8 +14,8 @@ import { cn } from "@/lib/utils";
 export const Navbar: React.FC<any> = ({ children }) => {
   const links = [
     {
-      label: "Öğrenciler",
-      href: "#",
+      label: "Ana Sayfa",
+      href: "/",
       icon: (
         <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
@@ -50,10 +50,10 @@ export const Navbar: React.FC<any> = ({ children }) => {
               <Logo />
             </>
             <div className="mt-8 flex flex-col gap-2">
-              <SidebarLink link={sidelink} />
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
+              <SidebarLink link={sidelink} />
             </div>
           </div>
           <div>

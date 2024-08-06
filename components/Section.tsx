@@ -20,7 +20,7 @@ async function Section() {
           </div>
 
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-5">
-            {data.map((item, idx) => (
+            {data?.map((item, idx) => (
               <MainBox item={item} key={idx} />
             ))}
           </div>

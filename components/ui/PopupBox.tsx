@@ -3,6 +3,7 @@ import { modalUp } from "@/state/state";
 import { useSetAtom } from "jotai";
 import React from "react";
 import NewClass from "./newClass";
+import Link from "next/link";
 
 const PopupBox: React.FC<any> = ({ value, data }) => {
   const popupvalue = useSetAtom(modalUp);
@@ -83,7 +84,8 @@ const PopupBox: React.FC<any> = ({ value, data }) => {
           </svg>
         </div>
         {selectedClass.map((item: any, idx: any) => (
-          <div
+          <Link
+            href={`/class/${value}_${item.class}`}
             className="flex flex-row gap-3 rounded-xl border border-gray-800 p-8 cursor-pointer shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 relative"
             key={idx}
           >
@@ -143,7 +145,7 @@ const PopupBox: React.FC<any> = ({ value, data }) => {
             <h2 className="text-4xl font-bold text-white">
               {value}-{item.class}
             </h2>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="mt-12 text-center">
