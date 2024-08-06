@@ -3,12 +3,12 @@ import { modalUp } from "@/state/state";
 import { useSetAtom } from "jotai";
 import React from "react";
 import NewClass from "./newClass";
-import { fetchClasses } from "@/fetch/fetch";
 
 const PopupBox: React.FC<any> = ({ value, data }) => {
   const popupvalue = useSetAtom(modalUp);
   const selected = data.find((item: any) => item.class === value);
   const selectedClass = selected.classes;
+  selectedClass.sort((a: any, b: any) => a.class.localeCompare(b.class));
   const id = selected.id;
 
   const handleDelete = async (classToDelete: string) => {
