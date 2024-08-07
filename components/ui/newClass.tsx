@@ -45,10 +45,9 @@ function NewClass() {
         setEkli(false);
         setNewClass("");
       }, 3000);
-      return; // Prevent PATCH request if class already exists
+      return;
     }
 
-    // Proceed with adding the new class
     const updatedClasses = [
       ...selectedData.classes,
       {
@@ -76,6 +75,7 @@ function NewClass() {
       const result = await response.json();
       // Optionally close the modal or update local state
       setIsOpen(false);
+      window.location.href="/"
     } catch (error) {
       console.error("Error:", error);
     }

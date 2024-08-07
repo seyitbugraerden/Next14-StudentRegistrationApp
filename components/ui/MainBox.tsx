@@ -8,7 +8,7 @@ const MainBox: React.FC<any> = ({ item }) => {
   const numberAtom = useSetAtom(selectedClass);
   return (
     <div
-      className="block rounded-xl border border-gray-800 p-8 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer"
+      className="block rounded-xl border border-gray-800 p-4 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer"
       onClick={() => {
         booleanAtom(true);
         numberAtom(item.class);

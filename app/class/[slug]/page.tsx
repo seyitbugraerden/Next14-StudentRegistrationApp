@@ -17,9 +17,7 @@ function Class() {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const response = await fetch(
-          "https://ogrenci-kayi.pockethost.io/api/collections/classes/records"
-        );
+        const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL);
         const data = await response.json();
         setData(
           data.items
@@ -77,16 +75,13 @@ function Class() {
                   setSelectedClasses(updatedClasses);
 
                   // Optionally, update the server with the new data
-                  fetch(
-                    `https://ogrenci-kayi.pockethost.io/api/collections/classes/records/${id}`,
-                    {
-                      method: "PATCH",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify({ classes: updatedClasses }),
-                    }
-                  ).catch((error) =>
+                  fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/${id}`, {
+                    method: "PATCH",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ classes: updatedClasses }),
+                  }).catch((error) =>
                     console.error("Error updating classes:", error)
                   );
                 }}
@@ -238,16 +233,13 @@ function Class() {
                 setSelectedClasses(updatedClasses);
 
                 try {
-                  await fetch(
-                    `https://ogrenci-kayi.pockethost.io/api/collections/classes/records/${id}`,
-                    {
-                      method: "PATCH",
-                      headers: {
-                        "Content-Type": "application/json",
-                      },
-                      body: JSON.stringify({ classes: updatedClasses }),
-                    }
-                  );
+                  await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/${id}`, {
+                    method: "PATCH",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ classes: updatedClasses }),
+                  });
                 } catch (error) {
                   console.error("Error updating classes:", error);
                 }

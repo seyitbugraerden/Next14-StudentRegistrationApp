@@ -13,6 +13,7 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
     "jotai": "^2.9.1",
+    "ldrs": "^1.0.2",
     "next": "14.2.5",
     "pocketbase": "^0.21.4",
     "react": "^18",

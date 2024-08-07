@@ -27,7 +27,7 @@ const Popup: React.FC<PopupProps> = ({ data }) => {
     };
   }, [setPopUp]);
   if (popUp === true) {
-    window.addEventListener("click", (e) => {
+    window.addEventListener("click", (e: any) => {
       if (e.target.id === "main-pop") {
         setPopUp(false);
       }

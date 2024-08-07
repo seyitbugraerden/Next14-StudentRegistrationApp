@@ -1,16 +1,17 @@
 "use client";
 import { modalUp } from "@/state/state";
 import { useSetAtom } from "jotai";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import NewClass from "./newClass";
 import Link from "next/link";
 
-const PopupBox: React.FC<any> = ({ value, data }) => {
+const PopupBox: React.FC<any> = ({ value }) => {
+  const [data, setData] = useState();
   const popupvalue = useSetAtom(modalUp);
-  const selected = data.find((item: any) => item.class === value);
-  const selectedClass = selected.classes;
-  selectedClass.sort((a: any, b: any) => a.class.localeCompare(b.class));
-  const id = selected.id;
+  const selected = data?.find((item: any) => item.class === value);
+  const selectedClass = selected?.classes;
+  selectedClass?.sort((a: any, b: any) => a.class.localeCompare(b.class));
+  const id = selected?.id;
 
   const handleDelete = async (classToDelete: string) => {
     // Sınıfı silmek için gerekli olan güncellemeleri yap
@@ -42,7 +43,22 @@ const PopupBox: React.FC<any> = ({ value, data }) => {
       console.error("Error:", error);
     }
   };
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL);
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const result = await response.json();
+        setData(result.items);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
+    fetchData();
+  }, []);
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-row items-center justify-center gap-5 flex-wrap">
@@ -83,7 +99,7 @@ const PopupBox: React.FC<any> = ({ value, data }) => {
             />
           </svg>
         </div>
-        {selectedClass.map((item: any, idx: any) => (
+        {selectedClass?.map((item: any, idx: any) => (
           <Link
             href={`/class/${value}_${item.class}`}
             className="flex flex-row gap-3 rounded-xl border border-gray-800 p-8 cursor-pointer shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 relative"
