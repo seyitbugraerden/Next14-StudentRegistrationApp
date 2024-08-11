@@ -1,5 +1,5 @@
 import { atom } from "jotai";
 
-export const selectedClass = atom<number>(10);
+export const selectedClass = atom('');
 export const modalUp = atom<boolean>(false);
 

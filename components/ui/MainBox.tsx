@@ -1,18 +1,22 @@
 "use client";
-import { modalUp, selectedClass } from "@/state/state";
+import { selectedClass } from "@/state/state";
 import { useSetAtom } from "jotai";
 import React from "react";
+import { useRouter } from 'next/navigation';
 
 const MainBox: React.FC<any> = ({ item }) => {
-  const booleanAtom = useSetAtom(modalUp);
-  const numberAtom = useSetAtom(selectedClass);
+  const setSelectedClass = useSetAtom(selectedClass);
+  const router = useRouter();
+
+  const handleClick = () => {
+    setSelectedClass(item.class);
+    router.push(`/${item.class}`);
+  };
+
   return (
     <div
       className="block rounded-xl border border-gray-800 p-4 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer"
-      onClick={() => {
-        booleanAtom(true);
-        numberAtom(item.class);
-      }}
+      onClick={handleClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"

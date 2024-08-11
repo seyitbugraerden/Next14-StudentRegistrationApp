@@ -2,13 +2,9 @@
 import React, { useEffect } from "react";
 import { useAtom } from "jotai";
 import { modalUp, selectedClass } from "@/state/state";
-import PopupBox from "./ui/PopupBox";
+import PopupBox from "../app/[slug]/components/PopupBox";
 
-interface PopupProps {
-  data: any;
-}
-
-const Popup: React.FC<PopupProps> = ({ data }) => {
+const Popup = () => {
   const [popUp, setPopUp] = useAtom(modalUp);
   const [value] = useAtom(selectedClass);
 
@@ -37,11 +33,11 @@ const Popup: React.FC<PopupProps> = ({ data }) => {
     <>
       {popUp && (
         <div
-          className="absolute left-0 top-0 w-screen h-screen flex justify-center items-center z-[999] bg-slate-950"
+          className="absolute left-0 top-0 w-screen h-screen flex justify-center items-center z-[999]"
           id="main-pop"
         >
-          <div className="gap-8 mt-24 flex flex-row flex-wrap justify-center">
-            <PopupBox value={value} data={data} />
+          <div className="gap-8 mt-24 flex flex-row flex-wrap justify-center bg-slate-400 p-12 relative">
+            <PopupBox value={value} />
           </div>
         </div>
       )}
