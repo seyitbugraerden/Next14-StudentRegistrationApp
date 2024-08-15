@@ -37,7 +37,7 @@ function Class() {
 
     fetchRecords();
     ring2.register();
-  }, []);
+  }, [data]);
 
   return (
     <div className="max-w-[50vw] h-screen flex justify-center items-center">

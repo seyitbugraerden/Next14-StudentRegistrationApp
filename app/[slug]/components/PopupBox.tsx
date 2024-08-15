@@ -4,10 +4,9 @@ import NewClass from "../../../components/ui/newClass";
 import Link from "next/link";
 import { selectedClass } from "@/state/state";
 import { useAtom } from "jotai";
-import { LampDemo } from "@/components/ui/lamp";
 import { ring2 } from "ldrs";
 const PopupBox = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<any>();
   const [isValue, setIsValue] = useState(true);
   const [value] = useAtom(selectedClass);
   const selected = data?.find((item: any) => item.class === value);
@@ -58,7 +57,8 @@ const PopupBox = () => {
 
     fetchData();
     ring2.register();
-  }, []);
+  }, []); // Include all dependencies here
+
   return (
     <div className="w-screen h-screen flex justify-center items-center">
       <div className="flex flex-col gap-6">
