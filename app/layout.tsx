@@ -19,9 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-slate-950`}>
-        <AtomProvider>
+        {/* <AtomProvider>
           <Navbar>{children}</Navbar>
-        </AtomProvider>
+        </AtomProvider> */}
+        {children}
       </body>
     </html>
   );
