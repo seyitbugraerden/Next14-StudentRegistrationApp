@@ -43,7 +43,7 @@ const PopupBox = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }

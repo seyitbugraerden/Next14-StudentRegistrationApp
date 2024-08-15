@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 
 function NewClass() {
   const [data, setData] = useState(null); //ilk datanın saklandığı alan
-  const [selectedData, setSelectedData] = useState(null); //Ekrandaki datanın sakladığımız datayla eşleştiği alan
+  const [selectedData, setSelectedData] = useState<any>(null); //Ekrandaki datanın sakladığımız datayla eşleştiği alan
   const [isOpen, setIsOpen] = useState(false);
   const [value] = useAtom(selectedClass);
   const [newClass, setNewClass] = useState("");
@@ -13,7 +13,7 @@ function NewClass() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
@@ -75,7 +75,7 @@ function NewClass() {
       const result = await response.json();
       // Optionally close the modal or update local state
       setIsOpen(false);
-      window.location.href="/"
+      window.location.href = "/";
     } catch (error) {
       console.error("Error:", error);
     }
@@ -92,7 +92,7 @@ function NewClass() {
         Yeni Sınıf Ekle
       </div>
       {isOpen && (
-        <div className="absolute top-0 left-0 w-screen h-screen flex flex-col gap-4 justify-center items-center bg-slate-950 z-[999]" >
+        <div className="absolute top-0 left-0 w-screen h-screen flex flex-col gap-4 justify-center items-center bg-slate-950 z-[999]">
           <div className="flex flex-row gap-6">
             <div className="flex flex-row gap-6 items-center">
               <h2 className="text-4xl">{value}</h2>

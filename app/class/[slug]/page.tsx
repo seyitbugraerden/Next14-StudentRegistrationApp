@@ -18,7 +18,7 @@ function Class() {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const response = await fetch(process.env.NEXT_PUBLIC_API_BASE_URL);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}`);
         const data = await response.json();
         setData(
           data.items
