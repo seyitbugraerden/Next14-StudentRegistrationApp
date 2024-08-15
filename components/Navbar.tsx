@@ -30,7 +30,7 @@ export const Navbar: React.FC<any> = ({ children }) => {
   ];
   const sidelink = {
     label: "Sınıflar",
-    href: "#",
+    href: "class",
     icon: (
       <IconBrandTabler className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
     ),
@@ -39,7 +39,7 @@ export const Navbar: React.FC<any> = ({ children }) => {
   return (
     <div
       className={cn(
-        "rounded-md flex flex-col md:flex-row bg-slate-950   flex-1 w-screen mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
+        "rounded-md flex flex-col md:flex-row bg-slate-950 flex-1 w-screen mx-auto border border-neutral-200 dark:border-neutral-700 overflow-hidden",
         "h-screen"
       )}
     >
@@ -53,7 +53,6 @@ export const Navbar: React.FC<any> = ({ children }) => {
               {links.map((link, idx) => (
                 <SidebarLink key={idx} link={link} />
               ))}
-              <SidebarLink link={sidelink} />
             </div>
           </div>
           <div>
@@ -75,7 +74,7 @@ export const Navbar: React.FC<any> = ({ children }) => {
           </div>
         </SidebarBody>
       </Sidebar>
-      {children}
+      <div className="max-w-[80vw] mx-auto">{children}</div>
     </div>
   );
 };

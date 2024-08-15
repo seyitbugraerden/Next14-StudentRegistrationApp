@@ -4,7 +4,7 @@ import PopupBox from "./components/PopupBox";
 
 function Sinif() {
   return (
-    <div className="w-screen h-screen flex justify-center items-center">
+    <div className="max-w-[50vw] mx-auto h-screen flex justify-center items-center">
       <PopupBox />
     </div>
   );

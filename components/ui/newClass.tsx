@@ -92,7 +92,7 @@ function NewClass() {
         Yeni Sınıf Ekle
       </div>
       {isOpen && (
-        <div className="absolute top-0 left-0 w-screen h-screen flex flex-col gap-4 justify-center items-center bg-slate-950 z-[100]" >
+        <div className="absolute top-0 left-0 w-screen h-screen flex flex-col gap-4 justify-center items-center bg-slate-950 z-[999]" >
           <div className="flex flex-row gap-6">
             <div className="flex flex-row gap-6 items-center">
               <h2 className="text-4xl">{value}</h2>

@@ -35,11 +35,11 @@ const MainBox: React.FC<any> = ({ item }) => {
         />
       </svg>
       {item.class !== "Mezun" ? (
-        <h2 className="mt-4 text-4xl font-bold text-white">
+        <h2 className="mt-4 text-2xl font-bold text-white">
           {item.class}. Sınıf
         </h2>
       ) : (
-        <h2 className="mt-4 text-4xl font-bold text-white">{item.class}</h2>
+        <h2 className="mt-4 text-2xl font-bold text-white">{item.class}</h2>
       )}
     </div>
   );

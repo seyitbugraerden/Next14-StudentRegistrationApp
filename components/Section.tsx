@@ -25,7 +25,7 @@ async function Section() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="text-center">
             <a
               href="#"
               className="inline-block rounded bg-cyan-500 px-12 py-3 text-sm font-medium text-slate-950 transition duration-300 hover:bg-cyan-500/20 hover:text-white focus:outline-none"
