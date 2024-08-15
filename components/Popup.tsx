@@ -1,12 +1,11 @@
 "use client";
 import React, { useEffect } from "react";
 import { useAtom } from "jotai";
-import { modalUp, selectedClass } from "@/state/state";
+import { modalUp } from "@/state/state";
 import PopupBox from "../app/[slug]/components/PopupBox";
 
 const Popup = () => {
   const [popUp, setPopUp] = useAtom(modalUp);
-  const [value] = useAtom(selectedClass);
 
   useEffect(() => {
     const handleEscape = (event: KeyboardEvent) => {
@@ -37,7 +36,7 @@ const Popup = () => {
           id="main-pop"
         >
           <div className="gap-8 mt-24 flex flex-row flex-wrap justify-center bg-slate-400 p-12 relative">
-            <PopupBox value={value} />
+            <PopupBox />
           </div>
         </div>
       )}

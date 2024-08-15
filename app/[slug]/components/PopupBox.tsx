@@ -5,7 +5,7 @@ import Link from "next/link";
 import { selectedClass } from "@/state/state";
 import { useAtom } from "jotai";
 import { ring2 } from "ldrs";
-const PopupBox = () => {
+const PopupBox: React.FC<any> = () => {
   const [data, setData] = useState<any>();
   const [isValue, setIsValue] = useState(true);
   const [value] = useAtom(selectedClass);
