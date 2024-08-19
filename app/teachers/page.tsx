@@ -6,7 +6,6 @@ import Link from "next/link";
 
 async function Section() {
   const data = await fetchTeachers();
-  console.log(data.find((item: any) => item.id === "qweqweqweqwe123"));
   return (
     <>
       <LampDemo />
