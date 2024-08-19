@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "./ui/sidebar";
 import {
   IconBrandTabler,
+  IconBrandTether,
   IconSettings,
   IconUserBolt,
 } from "@tabler/icons-react";
@@ -18,6 +19,13 @@ export const Navbar: React.FC<any> = ({ children }) => {
       href: "/",
       icon: (
         <IconUserBolt className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    {
+      label: "Öğretmenler",
+      href: "/teachers",
+      icon: (
+        <IconBrandTether className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
