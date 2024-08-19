@@ -1,5 +1,4 @@
 "use client";
-import { LampDemo } from "@/components/ui/lamp";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { ring2 } from "ldrs";

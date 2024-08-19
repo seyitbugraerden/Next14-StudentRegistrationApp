@@ -96,7 +96,7 @@ const TeacherArea: React.FC<any> = ({ data, id }) => {
                 fill="white"
               />
             </svg>
-            <h2 className="text-xl font-bold text-white">
+            <h2 className="text-sm font-bold text-white">
               {item.name} {item.lastname}
             </h2>
           </div>
