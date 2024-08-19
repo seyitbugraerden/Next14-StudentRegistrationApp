@@ -1,14 +1,16 @@
-import React from "react";
-import { fetchTeachers } from "@/fetch/fetch";
+"use client";
+import React, { useEffect, useState } from "react";
 import TeacherArea from "../components/TeacherArea";
 import AddNewTeacher from "../components/addNewTeacher";
+import { ring2 } from "ldrs";
 
-const Page: React.FC<any> = async ({ params }) => {
-  const data = await fetchTeachers();
-  const element = data.find((item: any) => item.id === params.slug);
+const Page: React.FC<any> = ({ params }) => {
+  const [data, setData] = useState<any>();
+  const [isOpen, setIsOpen] = useState<boolean>(true);
+
   return (
     <div className="max-w-[50vw] mx-auto h-screen flex flex-col gap-4 justify-center items-center">
-      <TeacherArea data={element} id={params.slug} />
+      <TeacherArea  selected={params.slug}/>
       <AddNewTeacher />
     </div>
   );
