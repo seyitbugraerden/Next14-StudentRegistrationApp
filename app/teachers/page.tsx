@@ -6,6 +6,7 @@ import Link from "next/link";
 
 async function Section() {
   const data = await fetchTeachers();
+  console.log(data.find((item: any) => item.id === "qweqweqweqwe123"));
   return (
     <>
       <LampDemo />
@@ -23,7 +24,7 @@ async function Section() {
           <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-5">
             {data.map((item, idx) => (
               <Link
-                href={`/teachers/${item.stage}`}
+                href={`/teachers/${item.id}`}
                 key={idx}
                 className="rounded-xl border border-gray-800 py-4 px-2 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer flex flex-row items-center gap-4"
               >
