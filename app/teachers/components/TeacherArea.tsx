@@ -1,28 +1,35 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-const TeacherArea: React.FC<any> = ({ id, bool }) => {
-  const [selectedElement, setSelectedElement] = useState<any>();
+const TeacherArea: React.FC<any> = ({ id }) => {
   const [data, setData] = useState<any>();
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   const handleRemoveTeacher = async (idx: number) => {
+    if (!data || !data.teachers) return;
+
+    // Create a new array excluding the item at index idx
     const updatedList = data.teachers.filter(
       (_: any, index: any) => index !== idx
     );
-    setSelectedElement(updatedList);
+
+    // Update the state
+    setData((prevData: any) => ({
+      ...prevData,
+      teachers: updatedList,
+    }));
 
     try {
+      // Make the PATCH request to update the server
       const response = await fetch(
         `${process.env.NEXT_PUBLIC_API_BASE_TECH_URL}/${id}`,
         {
           method: "PATCH",
           headers: {
-            "Content-type": "application/json",
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            stage: data.stage,
-            queue: data.queue,
+            ...data,
             teachers: updatedList,
           }),
         }
@@ -33,24 +40,20 @@ const TeacherArea: React.FC<any> = ({ id, bool }) => {
       }
 
       const result = await response.json();
-      console.log("Success:", result);
-    } catch (error) {
-      console.error("Error:", error);
-    }
+    } catch (error) {}
   };
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `${process.env.NEXT_PUBLIC_API_BASE_TECH_URL}`
+          `${process.env.NEXT_PUBLIC_API_BASE_TECH_URL}/${id}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const result = await response.json();
-        setData(result.items.filter((item) => item.id === id));
-        console.log(data)
+        setData(result);
         setIsOpen(false);
       } catch (error) {}
     };
@@ -61,18 +64,20 @@ const TeacherArea: React.FC<any> = ({ id, bool }) => {
     <div className="text-white">
       <div className="flex flex-row gap-4 mt-4">
         {isOpen ? (
-          <div
-            className="absolute top-[50%] left-[50%]"
-            style={{ transform: "translate(-50%, -50%)" }}
-          >
-            <l-ring-2
-              size="40"
-              stroke="5"
-              stroke-length="0.25"
-              bg-opacity="0.1"
-              speed="0.8"
-              color="white"
-            ></l-ring-2>
+          <div className="h-[80px]">
+            <div
+              className="absolute top-[50%] left-[52%]"
+              style={{ transform: "translate(-50%, -52%)" }}
+            >
+              <l-ring-2
+                size="40"
+                stroke="5"
+                stroke-length="0.25"
+                bg-opacity="0.1"
+                speed="0.8"
+                color="white"
+              ></l-ring-2>
+            </div>
           </div>
         ) : (
           data.teachers.map((item: any, idx: number) => (

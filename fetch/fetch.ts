@@ -7,3 +7,7 @@ export const fetchClasses = async () => {
 export const fetchTeachers = async () => {
   return await pb.collection("teachers").getFullList();
 };
+
+export const fetchTeacherItem = async (el: any) => {
+  return await pb.collection("teachers").getOne(el);
+};
