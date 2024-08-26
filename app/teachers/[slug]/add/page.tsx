@@ -7,7 +7,7 @@ function TeacherAdd() {
   const [newTeacherSurName, setNewTeacherSurName] = useState("");
   const [fetchDataElement, setFetchDataElement] = useState<any>([]);
   const [error, setError] = useState<string | null>(null);
-  const [section, setSection] = useState();
+  const [section, setSection] = useState<any>();
   const pathname = usePathname();
   const classId = pathname.split("/")[2];
   const [isOpen, setIsOpen] = useState(false);
