@@ -40,6 +40,7 @@ const TeacherArea: React.FC<any> = ({ id }) => {
       }
 
       const result = await response.json();
+      window.location.href = `  /teachers/${id}`;
     } catch (error) {}
   };
 
@@ -62,7 +63,7 @@ const TeacherArea: React.FC<any> = ({ id }) => {
   }, []);
   return (
     <div className="text-white">
-      <div className="flex flex-row gap-4 mt-4">
+      <div className="flex flex-row justify-center gap-4 mt-4">
         {isOpen ? (
           <div className="h-[80px]">
             <div

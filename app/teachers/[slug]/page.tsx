@@ -2,6 +2,7 @@ import React from "react";
 import AddNewTeacher from "../components/addNewTeacher";
 import { fetchTeacherItem } from "@/fetch/fetch";
 import TeacherArea from "../components/TeacherArea";
+import Link from "next/link";
 
 const Page: React.FC<any> = async ({ params }) => {
   const data = await fetchTeacherItem(params.slug);
@@ -12,7 +13,9 @@ const Page: React.FC<any> = async ({ params }) => {
           {data.stage}
         </h2>
         <TeacherArea id={params.slug} />
-        <AddNewTeacher />
+        <Link href={`/teachers/${params.slug}/add`}>
+          <AddNewTeacher />
+        </Link>
       </div>
     </div>
   );
