@@ -40,7 +40,6 @@ const TeacherArea: React.FC<any> = ({ id }) => {
       }
 
       const result = await response.json();
-      window.location.href = `  /teachers/${id}`;
     } catch (error) {}
   };
 
