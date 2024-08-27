@@ -1,9 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { LampDemo } from "@/components/ui/lamp";
+import { ring2 } from "ldrs";
 import AddStage from "./components/addStage";
 import Link from "next/link";
-import { ring2 } from "ldrs";
 function Section() {
   const [data, setData] = useState<any>();
   const [isOpen, setIsOpen] = useState<boolean>(true);

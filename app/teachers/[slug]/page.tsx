@@ -1,8 +1,8 @@
 import React from "react";
 import AddNewTeacher from "../components/addNewTeacher";
-import { fetchTeacherItem } from "@/fetch/fetch";
 import TeacherArea from "../components/TeacherArea";
 import Link from "next/link";
+import { fetchTeacherItem } from "@/fetch/fetch";
 
 const Page: React.FC<any> = async ({ params }) => {
   const data = await fetchTeacherItem(params.slug);
