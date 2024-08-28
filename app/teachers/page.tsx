@@ -62,7 +62,7 @@ function Section() {
                 <Link
                   href={`/teachers/${item.id}`}
                   key={idx}
-                  className="rounded-xl border border-gray-800 py-4 px-2 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer flex flex-row items-center gap-4"
+                  className="relative rounded-xl border border-gray-800 py-4 px-2 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer flex flex-row items-center gap-4"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
