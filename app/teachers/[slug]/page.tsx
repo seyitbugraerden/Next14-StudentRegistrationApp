@@ -3,6 +3,7 @@ import AddNewTeacher from "../components/addNewTeacher";
 import TeacherArea from "../components/TeacherArea";
 import Link from "next/link";
 import { fetchTeacherItem } from "@/fetch/fetch";
+import DeleteStage from "../components/deleteStage";
 
 const Page: React.FC<any> = async ({ params }) => {
   const data = await fetchTeacherItem(params.slug);
@@ -21,9 +22,7 @@ const Page: React.FC<any> = async ({ params }) => {
         <Link href={`/teachers/${params.slug}/add`}>
           <AddNewTeacher />
         </Link>
-        <div className="ms-4 mt-4 inline-block rounded bg-cyan-500 px-12 py-3 text-sm font-medium text-slate-950 transition duration-300 hover:bg-cyan-500/60 hover:text-white focus:outline-none cursor-pointer">
-          Bölümü Sil
-        </div>
+        <DeleteStage slug={params.slug}/>
       </div>
     </div>
   );
