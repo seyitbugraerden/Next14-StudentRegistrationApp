@@ -12,7 +12,12 @@ const Page: React.FC<any> = async ({ params }) => {
         <h2 className="text-3xl font-bold sm:text-4xl text-white">
           {data.stage}
         </h2>
-        <TeacherArea id={params.slug} />
+        {data.teachers !== null && data.teachers.length > 0 ? (
+          <TeacherArea id={params.slug} />
+        ) : (
+          <p className="my-5 text-white">Öğretmen bulunmamaktadır.</p>
+        )}
+
         <Link href={`/teachers/${params.slug}/add`}>
           <AddNewTeacher />
         </Link>
