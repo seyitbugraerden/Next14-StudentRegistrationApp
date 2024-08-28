@@ -9,19 +9,11 @@ function TeacherAdd() {
 
         <div className="flex flex-row gap-4">
           <div className="flex flex-col gap-4 items-start text-white">
-            <span>Öğretmen Adı</span>
+            <span>Bölüm ismi</span>
             <input
               type="text"
               className="border-[1px] border-neutral-200/50 outline-none px-3 py-2 text-white bg-transparent"
-              placeholder="İsim"
-            />
-          </div>
-          <div className="flex flex-col gap-4 items-start text-white">
-            <span>Öğretmen Soy Adı</span>
-            <input
-              type="text"
-              className="border-[1px] border-neutral-200/50 outline-none px-3 py-2 text-white bg-transparent"
-              placeholder="Soy isim"
+              placeholder="Bölüm ismi"
             />
           </div>
         </div>
