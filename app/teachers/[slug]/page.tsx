@@ -16,7 +16,7 @@ const Page: React.FC<any> = async ({ params }) => {
         {data.teachers !== null && data.teachers.length > 0 ? (
           <TeacherArea id={params.slug} />
         ) : (
-          <p className="my-5 text-white">Öğretmesn bulunmamaktadır.</p>
+          <p className="my-5 text-white">Öğretmen bulunmamaktadır.</p>
         )}
 
         <Link href={`/teachers/${params.slug}/add`}>
