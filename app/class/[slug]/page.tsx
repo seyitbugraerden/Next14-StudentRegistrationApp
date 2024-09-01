@@ -79,7 +79,7 @@ function Class() {
     );
   }
   return (
-    <div className="max-w-[50vw] h-screen flex justify-center items-center">
+    <div className="max-w-[50vw] h-[95dvh] my-0 py-0 flex justify-center items-center">
       <div className="flex flex-col gap-6 items-center text-white">
         <h2 className="text-2xl font-bold">
           {className} / {value?.toUpperCase()}
