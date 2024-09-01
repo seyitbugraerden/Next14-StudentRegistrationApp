@@ -15,12 +15,12 @@ const MainBox: React.FC<any> = ({ item }) => {
 
   return (
     <div
-      className="block rounded-xl border border-gray-800 p-4 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer"
+      className="flex flex-row items-center gap-2 rounded-xl border border-gray-800 p-4 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer"
       onClick={handleClick}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="size-10 text-cyan-500 "
+        className="size-5 text-cyan-500 "
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -35,11 +35,11 @@ const MainBox: React.FC<any> = ({ item }) => {
         />
       </svg>
       {item.class !== "Mezun" ? (
-        <h2 className="mt-4 text-2xl font-bold text-white">
+        <h2 className="text-xl font-bold text-white">
           {item.class}. Sınıf
         </h2>
       ) : (
-        <h2 className="mt-4 text-2xl font-bold text-white">{item.class}</h2>
+        <h2 className="text-xl font-bold text-white">{item.class}</h2>
       )}
     </div>
   );
