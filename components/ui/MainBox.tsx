@@ -20,7 +20,7 @@ const MainBox: React.FC<any> = ({ item }) => {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        className="size-5 text-cyan-500 "
+        className="size-5 text-cyan-500 2xl:size-10"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
@@ -35,11 +35,11 @@ const MainBox: React.FC<any> = ({ item }) => {
         />
       </svg>
       {item.class !== "Mezun" ? (
-        <h2 className="text-xl font-bold text-white">
+        <h2 className="text-xs 2xl:text-2xl font-bold text-white">
           {item.class}. Sınıf
         </h2>
       ) : (
-        <h2 className="text-xl font-bold text-white">{item.class}</h2>
+        <h2 className="text-xs 2xl:text-2xl font-bold text-white">{item.class}</h2>
       )}
     </div>
   );

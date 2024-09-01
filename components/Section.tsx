@@ -11,9 +11,9 @@ async function Section() {
       <section className="!bg-transparent text-white relative z-[99] -top-16">
         <div className="mx-auto w-screen max-w-[80%] px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="mx-auto max-w-lg text-center">
-            <h2 className="text-3xl font-bold sm:text-2xl">Hoş Geldiniz !</h2>
+            <h2 className="text-3xl font-bold sm:text-2xl 2xl:text-4xl">Hoş Geldiniz !</h2>
 
-            <p className="mt-4 text-gray-300 text-xs">
+            <p className="mt-4 text-gray-300 text-xs 2xl:text-md">
               Dilediğiniz sınıfı inceleyebilir, güncelleyebilir ve
               öğrencilerinize en uygun kurs programını hazırlayabilirsiniz.
             </p>
