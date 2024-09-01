@@ -100,7 +100,7 @@ const Page: React.FC = () => {
           <div className="my-4 flex flex-row gap-4 flex-wrap justify-center">
             {data?.teachers && data.teachers.length > 0 ? (
               data.teachers.map((item: any, idx: number) => (
-                <div className="flex flex-row">
+                <div key={idx} className="flex flex-row">
                   <div
                     key={idx}
                     className="rounded-xl border border-gray-800 py-4 px-2 shadow-xl transition hover:border-cyan-500/50 hover:shadow-cyan-500/50 cursor-pointer relative flex flex-row items-center gap-2 my-2"
