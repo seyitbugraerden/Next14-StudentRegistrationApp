@@ -132,7 +132,12 @@ const PopupBox: React.FC<any> = () => {
           ))}
         </div>
         <div className="text-center text-white scale-75 2xl:scale-100">
-          <NewClass />
+          <Link
+            href="/class/add"
+            className="inline-block rounded bg-cyan-500 px-12 py-3 text-sm font-medium text-slate-950 transition duration-300 hover:bg-cyan-500/60 hover:text-white focus:outline-none cursor-pointer"
+          >
+            Yeni Sınıf Ekle
+          </Link>
         </div>
       </div>
     </div>
