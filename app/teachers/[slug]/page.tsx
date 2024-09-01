@@ -77,7 +77,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[50vw] mx-auto h-screen flex flex-col gap-4 justify-center items-center">
+    <div className="max-w-[50vw] mx-auto h-[99dvh] flex flex-col gap-4 justify-center items-center">
       {isOpen ? (
         <div
           className="absolute top-[50%] left-[50%] w-screen h-[95dvh] flex justify-center items-center bg-black/50"
@@ -94,7 +94,7 @@ const Page: React.FC = () => {
         </div>
       ) : (
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-3xl font-bold sm:text-4xl text-white">
+          <h2 className="text-2xl 2xl:text-4xl font-bold text-white">
             {data?.stage || "Stage not found"}
           </h2>
           <div className="my-4 flex flex-row gap-4 flex-wrap justify-center">
@@ -154,7 +154,7 @@ const Page: React.FC = () => {
                         fill="white"
                       />
                     </svg>
-                    <h2 className="text-sm font-bold text-white">
+                    <h2 className="text-xs 2xl:text-2xl font-bold text-white">
                       {item.name} {item.lastname}
                     </h2>
                   </div>
