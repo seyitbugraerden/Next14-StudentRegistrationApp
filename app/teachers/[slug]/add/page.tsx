@@ -76,12 +76,12 @@ function TeacherAdd() {
       )}
       {isOpen ? (
         <>
-          <h2 className="text-4xl text-white mb-12">
+          <h2 className="text-2xl 2xl:text-4xl text-white mb-12">
             {section?.stage} Öğretmeni Ekle
           </h2>
 
-          <div className="flex flex-row gap-4">
-            <div className="flex flex-col gap-4 items-start text-white">
+          <div className="flex flex-row gap-4 text-xs 2xl:text-md">
+            <div className="flex flex-col gap-4 items-start text-white ">
               <span>Öğretmen Adı</span>
               <input
                 type="text"
@@ -104,7 +104,7 @@ function TeacherAdd() {
           </div>
           <div
             onClick={handleAddTeacher}
-            className="mt-12 rounded bg-cyan-500 px-12 py-3 text-sm font-medium text-slate-950 transition duration-300 hover:bg-cyan-500/60 hover:text-white focus:outline-none cursor-pointer"
+            className="mt-4 rounded bg-cyan-500 px-12 py-3 text-xs font-medium text-slate-950 transition duration-300 hover:bg-cyan-500/60 hover:text-white focus:outline-none cursor-pointer scale-75 2xl:scale-100"
           >
             Ekle
           </div>
