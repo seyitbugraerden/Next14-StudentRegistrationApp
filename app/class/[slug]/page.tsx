@@ -79,7 +79,7 @@ function Class() {
     );
   }
   return (
-    <div className="max-w-[50vw] h-[95dvh] my-0 py-0 flex justify-center items-center">
+    <div className="max-w-[50vw] h-[99dvh] my-0 py-0 flex justify-center items-center">
       <div className="flex flex-col gap-6 items-center text-white">
         <h2 className="text-2xl font-bold">
           {className} / {value?.toUpperCase()}
@@ -175,7 +175,7 @@ function Class() {
         </div>
       </div>
       {isOpen && (
-        <div className="absolute top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-slate-950 z-[100]">
+        <div className="absolute top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-slate-950/90 z-[100]">
           <div className="flex flex-row gap-4">
             <div className="flex flex-col items-start text-white">
               <span>Ad</span>

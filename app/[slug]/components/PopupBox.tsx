@@ -1,6 +1,5 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import NewClass from "../../../components/ui/newClass";
 import Link from "next/link";
 import { selectedClass } from "@/state/state";
 import { useAtom } from "jotai";
@@ -85,7 +84,7 @@ const PopupBox: React.FC<any> = () => {
               key={idx}
             >
               <div
-                className="scale-[.03] origin-top-right absolute top-2 right-2 z-[99]"
+                className="origin-top-right absolute top-1 right-1 z-[99]"
                 onClick={() => handleDelete(item.class)}
                 aria-hidden="true"
               >
@@ -95,6 +94,7 @@ const PopupBox: React.FC<any> = () => {
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
+                  className="size-3 hover:bg-cyan-500/50 duration-500 rounded-xl"
                 >
                   <path
                     d="M6 18L18 6M6 6l12 12"
