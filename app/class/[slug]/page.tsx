@@ -64,7 +64,20 @@ function Class() {
       body: JSON.stringify({ classes: updatedClasses }),
     }).catch((error) => console.error("Error updating classes:", error));
   };
-
+  if (isValue) {
+    return (
+      <div className="w-screen h-screen flex justify-center items-center absolute top-0 left-0">
+        <l-ring-2
+          size="40"
+          stroke="5"
+          stroke-length="0.25"
+          bg-opacity="0.1"
+          speed="0.8"
+          color="white"
+        ></l-ring-2>
+      </div>
+    );
+  }
   return (
     <div className="max-w-[50vw] h-screen flex justify-center items-center">
       <div className="flex flex-col gap-6 items-center text-white">
