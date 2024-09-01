@@ -30,7 +30,7 @@ function TeacherAdd() {
 
   return (
     <div className="absolute top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-slate-950 z-[100]">
-      <h2 className="text-2xl text-white">Bölüm Ekle</h2>
+      <h2 className="text-2xl 2xl:text-3xl text-white">Bölüm Ekle</h2>
       <form onSubmit={handleSubmit}>
         <div className="flex flex-row gap-4 text-xs my-6">
           <div className="flex flex-col gap-4 items-start text-white">

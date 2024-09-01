@@ -124,7 +124,7 @@ const PopupBox: React.FC<any> = () => {
               </svg>
               <Link
                 href={`/class/${value}_${item.class}`}
-                className="text-xs font-bold text-white"
+                className="text-xs 2xl:text-md font-bold text-white"
               >
                 {value}-{item.class}
               </Link>

@@ -154,7 +154,7 @@ const Page: React.FC = () => {
                         fill="white"
                       />
                     </svg>
-                    <h2 className="text-xs 2xl:text-2xl font-bold text-white">
+                    <h2 className="text-xs 2xl:text-md font-bold text-white">
                       {item.name} {item.lastname}
                     </h2>
                   </div>
