@@ -30,9 +30,9 @@ function TeacherAdd() {
 
   return (
     <div className="absolute top-0 left-0 w-screen h-screen flex flex-col justify-center items-center bg-slate-950 z-[100]">
-      <h2 className="text-4xl text-white mb-12">Bölüm Ekle</h2>
+      <h2 className="text-2xl text-white">Bölüm Ekle</h2>
       <form onSubmit={handleSubmit}>
-        <div className="flex flex-row gap-4">
+        <div className="flex flex-row gap-4 text-xs my-6">
           <div className="flex flex-col gap-4 items-start text-white">
             <span>Bölüm ismi</span>
             <input
@@ -47,7 +47,7 @@ function TeacherAdd() {
         <div className="flex justify-center items-center">
           <button
             type="submit"
-            className="mt-12 rounded bg-cyan-500 px-12 py-3 text-sm font-medium text-slate-950 transition duration-300 hover:bg-cyan-500/60 hover:text-white focus:outline-none cursor-pointer"
+            className="rounded bg-cyan-500 px-12 py-3 text-xs 2xl:text-sm scale-75 origin-center 2xl:scale-100 font-medium text-slate-950 transition duration-300 hover:bg-cyan-500/60 hover:text-white focus:outline-none cursor-pointer"
           >
             Ekle
           </button>
