@@ -24,16 +24,20 @@ function UygulamaYap() {
   const weekDates = getWeekDates(startOfWeek);
   return (
     <main className="text-white">
-      <h2 className="text-center my-12 text-4xl">Haftalık Program</h2>
-      <div className="relative overflow-x-auto mt-12">
-        <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+      <h2 className="text-center my-12 text-2xl">Haftalık Program</h2>
+      <div className="relative overflow-x-auto mt-12" id="style-15">
+        <table className="w-full text-[10px] text-left rtl:text-right text-gray-500 dark:text-gray-400">
+          <thead className=" text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="px-6 py-3">
+              <th scope="col" className="px-6 py-3 text-[10px]">
                 Günler / Saatler
               </th>
               {weekDates.map((date, index) => (
-                <th key={index} scope="col" className="px-6 py-3">
+                <th
+                  key={index}
+                  scope="col"
+                  className="px-6 py-3 text-[10px] w-[12vw]"
+                >
                   {date.toLocaleDateString("tr-TR", {
                     weekday: "long",
                     year: "numeric",
@@ -45,7 +49,7 @@ function UygulamaYap() {
             </tr>
           </thead>
           <tbody className="overflow-auto">
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 !text-[10px]">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
@@ -53,289 +57,130 @@ function UygulamaYap() {
                 08:30 - 09:10
               </th>
               <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
                     Default
                   </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
                     Default
                   </span>
                 </div>
               </td>
               <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
                     Default
                   </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
                     Default
                   </span>
                 </div>
               </td>
               <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
                     Default
                   </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
                     Default
                   </span>
                 </div>
               </td>
-
-              <td className="px-6 py-4">Silver</td>
-              <td className="px-6 py-4">Laptop</td>
-              <td className="px-6 py-4">$2999</td>
-              <td className="px-6 py-4">Silver</td>
+              <td className="px-6 py-4">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                </div>
+              </td>
+              <td className="px-6 py-4">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                </div>
+              </td>
+              <td className="px-6 py-4">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                </div>
+              </td>
+              <td className="px-6 py-4">
+                <div className="grid grid-cols-2 gap-x-2 gap-y-4">
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                    Default
+                  </span>
+                </div>
+              </td>
             </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 !text-[10px]">
               <th
                 scope="row"
                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
               >
-                09:20 - 10:00
-              </th>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                </div>
-              </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                </div>
-              </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                </div>
-              </td>
-
-              <td className="px-6 py-4">Silver</td>
-              <td className="px-6 py-4">Laptop</td>
-              <td className="px-6 py-4">$2999</td>
-              <td className="px-6 py-4">Silver</td>
-            </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                09:20 - 10:00
-              </th>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-gray-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                </div>
-              </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                </div>
-              </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">
-                    Default
-                  </span>
-                </div>
-              </td>
-
-              <td className="px-6 py-4">Silver</td>
-              <td className="px-6 py-4">Laptop</td>
-              <td className="px-6 py-4">$2999</td>
-              <td className="px-6 py-4">Silver</td>
-            </tr>
-            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-              <th
-                scope="row"
-                className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                <span className="bg-purple-100 text-purple-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300 cursor-pointer">
+                <span className="bg-purple-100 text-purple-800  font-medium me-2 px-2.5 py-0.5 rounded dark:bg-purple-900 dark:text-purple-300 cursor-pointer">
                   Saat Ekle
                 </span>
               </th>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <td className="px-6 py-4 ">
+                <div>
+                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 !text-[10px] font-medium text-center px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">
                     Öğrenci Ekle
                   </span>
                 </div>
               </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <td className="px-6 py-4 ">
+                <div>
+                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 !text-[10px] font-medium text-center px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">
                     Öğrenci Ekle
                   </span>
                 </div>
               </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <td className="px-6 py-4 ">
+                <div>
+                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 !text-[10px] font-medium text-center px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">
                     Öğrenci Ekle
                   </span>
                 </div>
               </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <td className="px-6 py-4 ">
+                <div>
+                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 !text-[10px] font-medium text-center px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">
                     Öğrenci Ekle
                   </span>
                 </div>
               </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <td className="px-6 py-4 ">
+                <div>
+                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 !text-[10px] font-medium text-center px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">
                     Öğrenci Ekle
                   </span>
                 </div>
               </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <td className="px-6 py-4 ">
+                <div>
+                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 !text-[10px] font-medium text-center px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">
                     Öğrenci Ekle
                   </span>
                 </div>
               </td>
-              <td className="px-6 py-4">
-                <div className="flex flex-row flex-wrap max-w-48 gap-y-4">
-                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">
+              <td className="px-6 py-4 ">
+                <div>
+                  <span className="bg-yellow-100 cursor-pointer text-yellow-800 !text-[10px] font-medium text-center px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300 text-nowrap">
                     Öğrenci Ekle
                   </span>
                 </div>

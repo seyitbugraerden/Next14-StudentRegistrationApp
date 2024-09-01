@@ -82,7 +82,7 @@ export const Navbar: React.FC<any> = ({ children }) => {
           </div>
         </SidebarBody>
       </Sidebar>
-      <div className="max-w-[80vw] mx-auto">{children}</div>
+      <div className="max-w-[85vw] mx-auto">{children}</div>
     </div>
   );
 };
