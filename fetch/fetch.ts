@@ -11,3 +11,7 @@ export const fetchTeachers = async () => {
 export const fetchTeacherItem = async (el: any) => {
   return await pb.collection("teachers").getOne(el);
 };
+
+export const fetchDates = async () => {
+  return await pb.collection("calendar").getFullList();
+};

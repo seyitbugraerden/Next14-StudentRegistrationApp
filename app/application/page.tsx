@@ -1,5 +1,5 @@
 "use client";
-import { LampDemo } from "@/components/ui/lamp";
+import { fetchDates } from "@/fetch/fetch";
 import React from "react";
 
 const getStartOfWeek = (date: any) => {
@@ -22,6 +22,11 @@ function UygulamaYap() {
   const today = new Date();
   const startOfWeek = getStartOfWeek(new Date(today));
   const weekDates = getWeekDates(startOfWeek);
+  weekDates.forEach((date) => {
+    const dateString = date.toISOString().split("T")[0]; // Convert Date to ISO string and format it
+    console.log(dateString);
+  });
+
   return (
     <main className="text-white">
       <h2 className="text-center my-12 text-2xl">Haftalık Program</h2>
