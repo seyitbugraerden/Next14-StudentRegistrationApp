@@ -1,6 +1,7 @@
 "use client";
 import { fetchDates } from "@/fetch/fetch";
-import React from "react";
+import React, { useState } from "react";
+import PopupModals from "./components/popupModal";
 
 const getStartOfWeek = (date: any) => {
   const day = date.getDay();
@@ -19,6 +20,7 @@ const getWeekDates = (startOfWeek: any) => {
   return weekDates;
 };
 function UygulamaYap() {
+  const [isClicked, setIsClicked] = useState(false);
   const today = new Date();
   const startOfWeek = getStartOfWeek(new Date(today));
   const weekDates = getWeekDates(startOfWeek);
@@ -29,6 +31,7 @@ function UygulamaYap() {
 
   return (
     <main className="text-white">
+      {isClicked && <PopupModals />}
       <h2 className="text-center my-12 text-2xl">Haftalık Program</h2>
       <div className="relative overflow-x-auto mt-12" id="style-15">
         <table className="w-full text-[10px] text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -63,7 +66,12 @@ function UygulamaYap() {
               </th>
               <td className="px-6 py-4">
                 <div className="grid grid-cols-2 gap-x-2 gap-y-4">
-                  <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
+                  <span
+                    className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300"
+                    onClick={() => {
+                      setIsClicked(true);
+                    }}
+                  >
                     Default
                   </span>
                   <span className="bg-blue-100 text-blue-800  font-medium text-center rounded dark:bg-blue-900 dark:text-blue-300">
