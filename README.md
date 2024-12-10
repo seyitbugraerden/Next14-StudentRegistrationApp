@@ -97,7 +97,7 @@ You might encounter some bugs while using this app. You are more than welcome to
 
 ## :gem: Acknowledgements
 
-Useful resources and dependencies that are used in QR Store.
+Useful resources and dependencies that are used in Class & Department Management System.
 
 ### Production Dependencies
 
